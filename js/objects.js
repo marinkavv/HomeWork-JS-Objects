@@ -48,3 +48,24 @@ console.log("customerCopy :>> ", customerCopy1);
 // Спосіб 2:
 const customerCopy2 = { ...customer };
 console.log("customerCopy2 :>> ", customerCopy2);
+
+// 2. Перебрати і вивести властивості об'єкту cat
+// {
+//     name: 'Murka',
+//     color: 'black',
+//     isMale: false,
+//     isFurnitureDemage: true,
+
+// }
+// циклом for..in.
+
+const cat = {
+  name: "Murka",
+  color: "black",
+  isMale: false,
+  isFurnitureDemage: true,
+};
+
+for (const key in cat) {
+  console.log(`Cat ${key} = ${cat[key]}`);
+}
