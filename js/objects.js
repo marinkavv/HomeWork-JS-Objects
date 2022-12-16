@@ -69,3 +69,35 @@ const cat = {
 for (const key in cat) {
   console.log(`Cat ${key} = ${cat[key]}`);
 }
+
+// 3. Створити функцію-конструктор для створення об'єктів книг з властивостями:
+// автор,
+// назва,
+// рік видання,
+// видавництво (рядок або *об'єкт з властивостями місто, назва),
+// ціна.
+//    Передбачити методи:
+// для обчислення віку книги (у роках),
+// для зміни ціни книги.
+
+function Book(author, nameBook, yearPublishing, publishingOffice, price) {
+  this.author = author;
+  this.nameBook = nameBook;
+  this.yearPublishing = yearPublishing;
+  this.publishingOffice = publishingOffice;
+  this.price = price;
+  this.changePrice = function (newPrice) {
+    this.price = newPrice;
+  };
+}
+
+const books = new Book(
+  "J. K. Rowling",
+  "Harry Potter",
+  1997,
+  "Bloomsbury",
+  400
+);
+
+books.changePrice(300);
+console.log("books2 :>> ", books);
